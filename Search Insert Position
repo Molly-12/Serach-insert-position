@@ -1,0 +1,12 @@
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        try:
+            
+            x = nums.index(target)
+            return x
+        except:
+            nums.append(target)
+            nums[:] = sorted(nums)
+            x = nums.index(target)
+            return x
+            
